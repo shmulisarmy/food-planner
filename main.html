@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Planner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <link rel="stylesheet" href="main.css?v=1.1">
+    <link rel="stylesheet" href="loading.css?v=1.1">
+    <link rel="icon" href="images/logo.jpg">
+</head>
+<script>
+    function close_popover(){
+    popover.style.display = "none";
+}
+</script>
+
+<body>
+
+    <nav>
+        <h1>Food Planner</h1>
+    </nav>
+
+    <h1 style="text-align: center;">Food Schedule</h1>
+
+    <div id="root">
+        <div class="ingredients">
+            <h1>Food List</h1>
+            
+        </div>
+        <main>
+            <div class="day">
+                <h2>Day 1</h2>
+                <div class="loading">loading...</div>
+            </div>
+            <div class="day">
+                <h2>Day 2</h2>
+                <div class="loading">loading...</div>
+            </div>
+            <div class="day">
+                <h2>Day 3</h2>
+                <div class="loading">loading...</div>
+            </div>
+            <div class="day">
+                <h2>Day 4</h2>
+                <div class="loading">loading...</div>
+            </div>
+            <div class="day">
+                <h2>Day 5</h2>
+                <div class="loading">loading...</div>
+            </div>
+            <div class="day">
+                <h2>Day 6</h2>
+                <div class="loading">loading...</div>
+            </div> 
+            </main>
+        </div>
+        
+    
+
+
+
+
+
+
+
+    <div id="popover" class="popover" popover style="display: none;">
+        <div class="innerwrapper">
+        <label for="new food: ">new food</label>
+        <br>
+        <input type="text">    
+        <button class="popover-botton">add</button>
+            <button onclick="close_popover()" class="x">x</button>
+        </div>
+
+    </div>
+
+
+
+    <script type="text/babel" src="main.jsx">
+        let new_food;
+        function choose_food(){
+            const popover = document.getElementById("popover");
+            const popover_botton = document.querySelector(".popover-botton");
+            new_food = document.querySelector("input").value;
+            popover.style.display = "block";
+        }
+
+        window.addEventListener('beforeunload', function (e) {
+    // Cancel the event
+    e.preventDefault();
+    // Chrome requires returnValue to be set
+    e.returnValue = '';
+
+    // Your custom code here, such as displaying a confirmation message
+    return 'Are you sure you want to leave?';
+});
+</script>
+
+</body>
+
+</html>

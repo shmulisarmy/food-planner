@@ -1,0 +1,201 @@
+@keyframes appear {
+    0%{
+        opacity: .9;
+        transform: scale(0.9);
+    }
+
+}
+
+body {
+    margin: 0%;
+    background-color: white;
+}
+
+nav {
+    background-color: rgba(0, 0, 0, 0.851);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    position: sticky;
+    top: 0%;
+    z-index: 2;
+}
+
+main {
+    margin: 4%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 20px;
+}
+
+.day {
+    animation: appear 2s;
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 5px 5px 2px black;
+    position: relative;
+    max-height: 180px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: black black;
+    transition: .5s;
+
+    .x {
+        /* font-size: xx-large; */
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        background-color: red;
+        border-radius: 6px;
+    }
+    .add{
+        position: absolute;
+        top: 2%;
+        right: 2%;
+        background-color: lightgreen;
+        border-radius: 6px;
+    }
+
+}
+
+.food-list {
+    margin: 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 20px;
+}
+
+.dish {
+    background-color: white;
+    position: relative;
+    border: 1px solid rgb(101, 101, 176);
+    border-radius: 10px;
+    padding: 2%;
+
+    .buttons {
+        .flex {
+
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .delete {
+            display: none;
+            background-color: rgb(151, 5, 5);
+            color: white;
+            /* border-radius: 8px; */
+            position: absolute;
+            top: 4%;
+            left: 4%;
+        }
+    }
+
+
+
+    padding: 20px;
+
+
+
+}
+
+.dish:hover .delete{
+    display:block;
+}
+
+.day:hover {
+    
+    /* background: linear-gradient(90deg, black, green); */
+    color: white;
+    background-color: #827d7d;
+}
+
+.dish:hover {
+    z-index: 1;
+    transform: scale(1.2);
+    background-color: whitesmoke;
+}
+
+.can-make {
+    color: green;
+}
+
+.cannot-make {
+    color: red;
+}
+#popover{
+    opacity: .92;
+    z-index: 2;
+    border-radius: 10px;
+    width: 40%;
+    height: 40%;
+    
+    .innerwrapper{
+        padding: 20%;
+        position: relative;
+        opacity: .95;
+
+    }
+
+    .x{
+        font-size: xx-large;
+        background-color: red;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        border-radius: 4px;
+    }
+}
+
+.ingredients{
+    transform: translateX(-90%);
+    background-color: grey;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 2;
+    transition: 2s;
+    padding-top: 4%;
+    padding-left: 4%;
+    overflow-y: scroll;
+    width: 200px;
+
+
+
+    button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px;
+    margin: 2px;
+    background-color: white;
+}
+.ingredient{
+    background-color: #5d8383;
+    width: 120px;
+    box-shadow: 3px 3px 3px ;
+    transition: 1s;
+}
+.ingredient:hover{
+    background-color: greenyellow;
+    border-radius: 10px;
+    padding: 10px;
+}
+button:active {
+    background-color: lightgray;
+    transform: scale(.8);
+}
+.x{
+    background-color: rgba(201, 22, 22, 0.571);
+    
+}
+.add{
+    background-color: rgba(22, 201, 22, 0.571);
+    padding: 20px;
+}
+}
+.ingredients:hover{
+    transform: translateX(0%);
+    background-color: #5f6868f5;
+}

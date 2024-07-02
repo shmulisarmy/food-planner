@@ -1,0 +1,14 @@
+@keyframes jump {
+
+50%{
+    transform: translateY(-20%);
+}
+
+}
+
+
+.loading{
+    font-size: x-large;
+    animation: jump .5s infinite;
+
+}
