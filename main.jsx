@@ -58,189 +58,32 @@ class FoodUser {
 }
 
 // Example usage:
-let recipes = {
-    "chocolate chip cookies": {
-        "flour": 1,
-        "sugar": 2,
-        "butter": 1,
-        "chocolate chips": 10,
-        "baking soda": 1,
-        "vanilla extract": 1,
-        "brown sugar": 1,
-        "shredded coconut": 1,
 
-    },
-    "mac and cheese": {
-        "macaroni": 12,
-        "cheese": 10,
-        "milk": 2,
-        "butter": 1,
-        "salt": 1,
-        "parmesan cheese": 2,
-        "paprika": 1,
-    },
-    "tiramisu": {
-        "mascarpone cheese": 10,
-        "espresso": 10,
-        "sugar": 2,
-        "eggs": 12,
-        "cocoa powder": 1,
-        "salt": 1,
-        "sugar substitute": 1,
-    },
-    "baked potatoes": {
-        "potatoes": 4,
-        "salt": 1,
-        "butter": 1,
-        "sour cream": 1,
-        "chives": 1,
-        "cheddar cheese": 2,
-    },
-    "carrots yogurt": {
-        "carrots": 1,
-        "yogurt": 2,
-    }
-}
-let foodSchedule = [
-    { "baked potatoes": 1 },
-    { "baked potatoes": 1, "tiramisu": 2 },
-    { "baked potatoes": 1 },
-    { "carrots yogurt": 2, "chocolate chip cookies": 2, "mac and cheese": 1, "baked potatoes": 1, "tiramisu": 1 },
-    { "carrots yogurt": 2, "chocolate chip cookies": 2, "mac and cheese": 1, "baked potatoes": 1, "tiramisu": 1 },
-    { "carrots yogurt": 2, "chocolate chip cookies": 2, "mac and cheese": 1, "baked potatoes": 1, "tiramisu": 1 },
-    { "carrots yogurt": 2, "chocolate chip cookies": 2, "mac and cheese": 1, "baked potatoes": 1, "tiramisu": 1 },
-    { "carrots yogurt": 2, "chocolate chip cookies": 2, "mac and cheese": 1, "baked potatoes": 1, "tiramisu": 1 },
-    { "carrots yogurt": 2, "chocolate chip cookies": 2, "mac and cheese": 1, "baked potatoes": 1, "tiramisu": 1 },
-    { "apples": 4, "oranges": 3 },
-    { "milk": 2, "bread": 5 },
-    { "cheese": 12, "bananas": 10, "eggs": 12 },
-    { "peanut butter": 3, "jelly": 2 },
-    { "almonds": 7, "crackers": 13, "hummus": 4 },
-    { "nuts": 15, "salsa": 1, "sour cream": 1 },
-    { "yogurt": 10, "carrots": 5, "corn": 12 },
-    { "broccoli": 7, "spinach": 15, "tofu": 10 },
-    { "coffee": 1, "tea": 1 },
-    { "baked potatoes": 2, "tiramisu": 3, "mac and cheese": 4 },
-    { "apples": 6, "oranges": 4, "milk": 2 },
-    { "bread": 8, "cheese": 14, "bananas": 12 },
-    { "eggs": 16, "peanut butter": 5, "jelly": 3 },
-    { "almonds": 9, "crackers": 15, "hummus": 6 },
-    { "nuts": 18, "salsa": 3, "sour cream": 2 },
-    { "yogurt": 12, "carrots": 6, "corn": 14 },
-    { "broccoli": 8, "spinach": 16, "tofu": 12 },
-    { "coffee": 2, "tea": 2 },
-    { "baked potatoes": 3, "tiramisu": 4, "mac and cheese": 5 },
-    { "apples": 7, "oranges": 5, "milk": 3 },
-    { "bread": 9, "cheese": 15, "bananas": 13 },
-    { "eggs": 18, "peanut butter": 6, "jelly": 4 },
-    { "almonds": 11, "crackers": 17, "hummus": 7 },
-    { "nuts": 20, "salsa": 4, "sour cream": 3 },
-    { "yogurt": 14, "carrots": 7, "corn": 16 },
-    { "broccoli": 9, "spinach": 18, "tofu": 14 },
-    { "coffee": 3, "tea": 3 },
-    { "baked potatoes": 2, "carrots": 4, "corn": 6, "cheese": 8 },
-    { "bread": 7, "almonds": 12, "eggs": 14, "peanut butter": 10 },
-    { "tiramisu": 5, "mac and cheese": 6, "bananas": 9 },
-    { "spinach": 4, "tofu": 5, "nuts": 11 },
-    { "crackers": 3, "hummus": 8, "jelly": 7 },
-    { "coffee": 4, "tea": 5, "salsa": 2 },
-    { "apples": 5, "yogurt": 6, "sour cream": 3 },
-    { "carrots yogurt": 1, "baked potatoes": 2 },
-    { "bread": 4, "cheese": 5, "oranges": 7 },
-    { "milk": 3, "chocolate chip cookies": 6 },
-    { "mac and cheese": 4, "nuts": 5, "tiramisu": 6 },
-    { "spinach": 7, "tofu": 8, "broccoli": 9 },
-    { "carrots": 6, "corn": 7, "crackers": 5 },
-    { "apples": 3, "yogurt": 4, "bananas": 5 },
-    { "bread": 6, "cheese": 7, "hummus": 8 },
-    { "peanut butter": 5, "jelly": 4, "eggs": 3 },
-    { "coffee": 6, "tea": 7, "salsa": 4 },
-    { "carrots yogurt": 2, "baked potatoes": 3 },
-    { "bread": 5, "cheese": 6, "oranges": 8 },
-    { "milk": 4, "chocolate chip cookies": 7 },
-    { "mac and cheese": 5, "nuts": 6, "tiramisu": 7 },
-    { "spinach": 8, "tofu": 9, "broccoli": 10 },
-    { "carrots": 7, "corn": 8, "crackers": 6 },
-    { "apples": 4, "yogurt": 5, "bananas": 6 },
-    { "bread": 7, "cheese": 8, "hummus": 9 },
-    { "peanut butter": 6, "jelly": 5, "eggs": 4 },
-    { "coffee": 7, "tea": 8, "salsa": 5 },
-];
 
-let currentFoods = {
-    "apples": 4,
-    "oranges": 3,
-    "milk": 2
-    , "bread": 5,
-    "cheese": 12,
-    "bananas": 10,
-    "eggs": 12,
-    "peanut butter": 3,
-    "jelly": 2
-    , "almonds": 7,
-    "crackers": 13,
-    "hummus": 4,
-    "nuts": 15,
-    "salsa": 1,
-    "sour cream": 1,
-    "yogurt": 10,
+let foodUser = new FoodUser(recipes, foodSchedule, currentFoods);
 
-    "carrots": 5,
-    "corn": 12,
-    "broccoli": 7,
-    "spinach": 15,
-    "tofu": 10,
-    "coffee": 1,
-    "tea": 1,
-};
 
-let initialCurrentFoods = {
-    "apples": 4,
-    "oranges": 3,
-    "milk": 2
-    , "bread": 5,
-    "cheese": 12,
-    "bananas": 10,
-    "eggs": 12,
-    "peanut butter": 3,
-    "jelly": 2
-    , "almonds": 7,
-    "crackers": 13,
-    "hummus": 4,
-    "nuts": 15,
-    "salsa": 1,
-    "sour cream": 1,
-    "yogurt": 10,
-
-    "carrots": 5,
-    "corn": 12,
-    "broccoli": 7,
-    "spinach": 15,
-    "tofu": 10,
-    "coffee": 1,
-    "tea": 1,
-};
 
 
 function FoodList() {
-    const [currentFoods, setCurrentFoods] = React.useState(initialCurrentFoods)
+    const [ReactIngrediants, setReactIngrediants] = React.useState(foodUser.currentFoods)
     
 
     function change_food_amount(foodName, amount) {
-        currentFoods[foodName] += amount;
-        setCurrentFoods({...currentFoods})
+        foodUser.currentFoods[foodName] += amount;
+        setReactIngrediants({...foodUser.currentFoods})
 
     }
     function delete_food(foodName) {
-        delete currentFoods[foodName];
-        setCurrentFoods({...currentFoods})
+        delete foodUser.currentFoods[foodName];
+        setReactIngrediants({...foodUser.currentFoods})
     }
     function add_food() {
         const new_food = prompt("Enter new food");
         if (new_food == null) return;
-        if (currentFoods[new_food]) return;
-        currentFoods[new_food] = 0;
-        setCurrentFoods({...currentFoods})
+        if (foodUser.currentFoods[new_food]) return;
+        foodUser.currentFoods[new_food] = 0;
+        setReactIngrediants({...foodUser.currentFoods})
     }
 
     return (
@@ -248,7 +91,7 @@ function FoodList() {
             <h1>Food List</h1>
             <button className="add" onClick={add_food}>add_food</button>
             <main>
-                {Object.keys(currentFoods).map((foodName, index) => (
+                {Object.keys(foodUser.currentFoods).map((foodName, index) => (
                     <div key={foodName} className={"ingredient"}>
                         <button onClick={() => change_food_amount(foodName, -1)}>-1</button>
                         <button onClick={() => change_food_amount(foodName, 1)}>+1</button>
@@ -277,7 +120,6 @@ popover_submit.onClick = () => {
 
 
 
-let foodUser = new FoodUser(recipes, foodSchedule, currentFoods);
 
 
 function App() {
